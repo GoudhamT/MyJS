@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 60px;
+    resize: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#token {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#retrievedMessage {
+    margin-top: 20px;
+    font-weight: normal;
+}
