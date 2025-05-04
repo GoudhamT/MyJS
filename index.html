@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Encrypted Chat UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h2>Send a Message</h2>
+    <textarea id="message" placeholder="Enter message" oninput="resizeTextarea(this)"></textarea>
+    <button onclick="sendMessage()">Send</button>
+    <p id="token"></p>
+
+    <h2>Retrieve Message</h2>
+    <input type="text" id="retrievalToken" placeholder="Enter token">
+    <button onclick="retrieveMessage()">Retrieve</button>
+    <p id="retrievedMessage"></p>
+
+    <script>
+        function resizeTextarea(el) {
+            el.style.height = 'auto';
+            el.style.height = el.scrollHeight + 'px';
+        }
+
+        function sendMessage() {
+            const token = 'example-token-1234';
+            document.getElementById('token').innerText = 'Token: ' + token;
+            document.getElementById('message').value = '';
+            resizeTextarea(document.getElementById('message'));
+        }
+
+        function retrieveMessage() {
+            const retrieved = 'This is a decrypted message.';
+            document.getElementById('retrievedMessage').innerText = retrieved;
+        }
+    </script>
+
+</body>
+</html>
